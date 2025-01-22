@@ -1,7 +1,34 @@
-/* Custom styles */
+/* ===== General Styles ===== */
+:root {
+    --bg-color: #ffffff; /* Light mode background */
+    --text-color: #333333; /* Light mode text */
+    --card-bg: #ffffff; /* Light mode card background */
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light mode card shadow */
+    --timeline-bg: #f8f9fa; /* Light mode timeline background */
+    --timeline-line: #ddd; /* Light mode timeline line */
+    --primary-color: #007bff; /* Primary color for buttons, links, etc. */
+    --accent-color: #0056b3; /* Darker shade of blue for accents */
+    --light-blue: #e6f0ff; /* Light blue for backgrounds */
+}
+
+[data-bs-theme="dark"] {
+    --bg-color: #121212; /* Dark mode background */
+    --text-color: #e0e0e0; /* Light text for dark mode */
+    --card-bg: #1e1e1e; /* Dark mode card background */
+    --card-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Dark mode card shadow */
+    --timeline-bg: #2d2d2d; /* Dark mode timeline background */
+    --timeline-line: #444; /* Dark mode timeline line */
+    --primary-color: #0d6efd; /* Dark mode primary color */
+    --accent-color: #0a58ca; /* Darker shade of blue for accents */
+    --light-blue: #1a365d; /* Dark blue for backgrounds */
+}
+
 body {
     font-family: 'Arial', sans-serif;
     padding-top: 56px; /* Offset for fixed navbar */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar {
@@ -10,26 +37,161 @@ body {
 
 header {
     padding: 100px 0;
+    background-color: var(--primary-color); /* Blue header */
+    color: white; /* White text for header */
 }
 
 section {
     padding: 60px 0;
 }
 
-.card {
-    height: 100%;
-    transition: transform 0.3s ease;
+/* ===== About Me Section ===== */
+#about {
+    background-color: var(--light-blue); /* Light blue background */
+    padding: 60px 0;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+#about h2 {
+    color: var(--primary-color); /* Blue heading */
 }
 
-footer {
-    padding: 20px 0;
+#about p {
+    color: var(--text-color); /* Dynamic text color */
 }
 
-/* Timeline Styling */
+/* ===== Education Section ===== */
+#education {
+    background-color: var(--light-blue); /* Light blue background */
+    padding: 60px 0;
+}
+
+#education h2 {
+    color: var(--primary-color); /* Blue heading */
+}
+
+#education .table {
+    background-color: var(--card-bg); /* Card background for table */
+    color: var(--text-color); /* Dynamic text color */
+}
+
+#education .table th,
+#education .table td {
+    border-color: var(--timeline-line); /* Dynamic border color */
+}
+
+/* ===== Projects Section ===== */
+#projects {
+    padding: 60px 0;
+    background-color: var(--bg-color);
+}
+
+#projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#projects .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -10px;
+}
+
+#projects .project-tile {
+    border: 1px solid var(--timeline-line);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--card-bg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+#projects .project-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+
+#projects .project-tile h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+#projects .project-tile p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+#projects .project-tile p:last-child {
+    margin-bottom: 0;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    #projects .project-tile {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+}
+
+/* ===== Skills Section ===== */
+section#skills {
+    padding: 60px 0;
+    background-color: var(--bg-color);
+}
+
+section#skills h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+section#skills .skill-icon {
+    margin: 15px 0;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+
+section#skills .skill-icon i {
+    font-size: 2.5rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    color: var(--primary-color); /* Blue icons */
+}
+
+section#skills .skill-icon:hover i {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+section#skills .tool-name {
+    display: none;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: var(--text-color);
+    background-color: var(--card-bg);
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: var(--card-shadow);
+    white-space: nowrap;
+}
+
+section#skills .skill-icon:hover .tool-name {
+    display: block;
+}
+
+/* ===== Timeline Styling ===== */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -44,7 +206,7 @@ footer {
     left: 50%;
     width: 2px;
     height: 100%;
-    background: #ddd;
+    background: var(--timeline-line);
     transform: translateX(-50%);
 }
 
@@ -61,7 +223,7 @@ footer {
     left: 50%;
     width: 20px;
     height: 20px;
-    background: #007bff;
+    background: var(--primary-color); /* Blue dot */
     border-radius: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -71,9 +233,10 @@ footer {
     position: relative;
     width: 45%;
     padding: 20px;
-    background: #f8f9fa;
+    background: var(--timeline-bg);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--card-shadow);
+    color: var(--text-color);
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
@@ -84,76 +247,9 @@ footer {
     left: 55%;
 }
 
-/* Responsive Table */
-.table-responsive {
-    overflow-x: auto;
-}
-
-/* General styling for the projects section */
-#projects {
-    padding: 60px 0; /* Adds padding to the top and bottom of the section */
-    background-color: #f8f9fa; /* Light background color for the section */
-}
-
-/* Styling for the container inside the projects section */
-#projects .container {
-    max-width: 1200px; /* Limits the width of the container */
-    margin: 0 auto; /* Centers the container */
-    padding: 0 15px; /* Adds padding to the sides */
-}
-
-/* Styling for the row inside the projects section */
-#projects .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Spaces the tiles evenly */
-    margin: -10px; /* Negative margin to offset the tile margins */
-}
-
-/* Styling for each project tile */
-#projects .project-tile {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    background-color: #fff; /* White background for the tiles */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1 1 calc(33.333% - 20px); /* Ensures three tiles per row with spacing */
-    box-sizing: border-box; /* Ensures padding is included in the width */
-}
-
-/* Hover effect for project tiles */
-#projects .project-tile:hover {
-    transform: translateY(-5px); /* Lifts the tile slightly on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow on hover */
-}
-
-/* Styling for the project title */
-#projects .project-tile h5 {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #333; /* Dark color for the title */
-    margin-bottom: 10px;
-}
-
-/* Styling for the project technologies and date */
-#projects .project-tile p {
-    font-size: 0.9rem;
-    color: #555; /* Medium color for the text */
-    margin-bottom: 5px;
-}
-
-/* Styling for the project description */
-#projects .project-tile p:last-child {
-    margin-bottom: 0;
-    color: #666; /* Slightly lighter color for the description */
-    line-height: 1.5; /* Improves readability */
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    #projects .project-tile {
-        flex: 1 1 100%; /* Stacks tiles vertically on smaller screens */
-        margin: 10px 0; /* Adjusts margin for stacked tiles */
-    }
+/* ===== Footer ===== */
+footer {
+    padding: 20px 0;
+    background-color: var(--primary-color); /* Blue footer */
+    color: white; /* White text for footer */
 }

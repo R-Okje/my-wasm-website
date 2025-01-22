@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust + WebAssembly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hello, WebAssembly!</h1>
+    <p id="greeting"></p>
+    <script type="module" src="script.js"></script>
+    <script type="module">
+        import init, { greet } from './pkg/my_wasm_project.js';
+        init().then(() => {
+            document.getElementById('greeting').textContent = greet('Rustacean');
+        });
+    </script>
+</body>
+</html>

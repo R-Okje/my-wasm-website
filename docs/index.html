@@ -16,91 +16,135 @@
             document.getElementById('greeting').textContent = greet('Rustacean');
         });
     </script>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Viral Soni</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <header>
-        <h1>Viral Soni</h1>
-        <p>Specialization in Rust, Cloud, SAP ABAP</p>
-        <p>Bachelor of Engineering in Information Technology (2023)</p>
-        <p>+91 9967271977 | viralssoni@gmail.com</p>
+    <!-- Hero Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Viral Soni</h1>
+            <p class="lead">Specialization in Rust, Cloud, SAP ABAP</p>
+            <p class="lead">Bachelor of Engineering in Information Technology (2023)</p>
+            <p class="lead">+91 9967271977 | viralssoni@gmail.com</p>
+        </div>
     </header>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Nimus AI — Cloud Monitoring and Automation</h3>
-            <p><strong>Tech Stack:</strong> Rust, JavaScript, Postman</p>
-            <p>Developed an AI platform for automating tasks in Cloud Computing Services (OCI Cloud). Executed Rust APIs
-                for resource management.</p>
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About Me</h2>
+            <p class="text-center">I am a passionate software developer with expertise in Rust, Cloud Computing, and SAP ABAP. I enjoy building scalable and efficient systems that solve real-world problems.</p>
         </div>
-        <div class="project">
-            <h3>Block Engine — SAP SD Contract Blocking Mechanism</h3>
-            <p><strong>Tech Stack:</strong> SAP ABAP</p>
-            <p>Developed a tool to apply blocks on Sales and Distribution Contracts (SD). Integrated logic to automate
-                block/unblock actions.</p>
-        </div>
-        <div class="project">
-            <h3>Contract Copilot — Contract Analyzer with Quick Search</h3>
-            <p><strong>Tech Stack:</strong> AI, Python</p>
-            <p>Built an AI-powered platform for analyzing contracts and running queries on extracted data.</p>
-        </div>
-        <!-- Add more projects as needed -->
     </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="job">
-            <h3>Junior Associate Software Engineer — Simple Logic IT Pvt. Ltd.</h3>
-            <p><strong>Duration:</strong> Nov 2024 - Present</p>
-            <p>Developed a Cloud Dashboard to view all active resources running on the Cloud. Enhanced API performance
-                by 70%.</p>
+    <!-- Projects Section -->
+    <section id="projects" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Projects</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Nimus AI — Cloud Monitoring and Automation</h5>
+                            <p class="card-text"><strong>Tech Stack:</strong> Rust, JavaScript, Postman</p>
+                            <p class="card-text">Developed an AI platform for automating tasks in Cloud Computing Services (OCI Cloud). Executed Rust APIs for resource management.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Block Engine — SAP SD Contract Blocking Mechanism</h5>
+                            <p class="card-text"><strong>Tech Stack:</strong> SAP ABAP</p>
+                            <p class="card-text">Developed a tool to apply blocks on Sales and Distribution Contracts (SD). Integrated logic to automate block/unblock actions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Contract Copilot — Contract Analyzer with Quick Search</h5>
+                            <p class="card-text"><strong>Tech Stack:</strong> AI, Python</p>
+                            <p class="card-text">Built an AI-powered platform for analyzing contracts and running queries on extracted data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="job">
-            <h3>IT Specialist — Protera Technologies</h3>
-            <p><strong>Duration:</strong> Mar 2024 - Sept 2024</p>
-            <p>Configured and maintained SAP instances on the cloud. Implemented IT infrastructure automation with
-                ServiceNow.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Languages & Libraries</h4>
+                    <ul>
+                        <li>Rust</li>
+                        <li>Python</li>
+                        <li>C, C++</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>SAP Workbench</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li>Postman</li>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>ServiceNow</li>
+                        <li>Wireshark</li>
+                        <li>MongoDB, MySQL</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <!-- Add more experience as needed -->
     </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <table>
-            <tr>
-                <th>Degree</th>
-                <th>Institute</th>
-                <th>CGPA/Marks</th>
-                <th>Year</th>
-            </tr>
-            <tr>
-                <td>B.E. Information Technology</td>
-                <td>St. Francis Institute of Technology</td>
-                <td>9.31/10</td>
-                <td>2023</td>
-            </tr>
-            <tr>
-                <td>HSC (12th Grade)</td>
-                <td>Alpha Junior College</td>
-                <td>91.17%</td>
-                <td>2017</td>
-            </tr>
-            <!-- Add more education details as needed -->
-        </table>
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact</h2>
+            <p class="text-center">Feel free to reach out to me for collaborations or opportunities!</p>
+            <p class="text-center">Email: <a href="mailto:viralssoni@gmail.com">viralssoni@gmail.com</a></p>
+        </div>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Languages:</strong> Rust, Python, C, C++, Java, JavaScript, Shell Script</li>
-            <li><strong>Tools:</strong> Postman, SAP ABAP, Docker, Kubernetes, ServiceNow, Wireshark</li>
-            <li><strong>Databases:</strong> MongoDB, MySQL</li>
-            <li><strong>Soft Skills:</strong> Problem-Solving, Communication, Team Collaboration</li>
-        </ul>
-    </section>
-
-    <footer>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 Viral Soni. All rights reserved.</p>
     </footer>
+
+    <!-- Bootstrap JS (Optional, for interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- WebAssembly Script -->
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>

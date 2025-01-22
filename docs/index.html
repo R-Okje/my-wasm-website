@@ -9,15 +9,8 @@
 </head>
 
 <body>
-    <script type="module" src="script.js"></script>
-    <script type="module">
-        import init, { greet } from './pkg/my_wasm_project.js';
-        init().then(() => {
-            document.getElementById('greeting').textContent = greet('Rustacean');
-        });
-    </script>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Viral Soni</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +25,9 @@
                         <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
@@ -43,7 +39,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="bg-primary text-white text-center py-5">
+    <header class="bg-primary text-white text-center py-5 mt-5">
         <div class="container">
             <h1 class="display-4">Viral Soni</h1>
             <p class="lead">Specialization in Rust, Cloud, SAP ABAP</p>
@@ -66,7 +62,7 @@
             <h2 class="text-center mb-4">Projects</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="card">
+                    <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">Nimus AI — Cloud Monitoring and Automation</h5>
                             <p class="card-text"><strong>Tech Stack:</strong> Rust, JavaScript, Postman</p>
@@ -75,7 +71,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card">
+                    <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">Block Engine — SAP SD Contract Blocking Mechanism</h5>
                             <p class="card-text"><strong>Tech Stack:</strong> SAP ABAP</p>
@@ -84,7 +80,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card">
+                    <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">Contract Copilot — Contract Analyzer with Quick Search</h5>
                             <p class="card-text"><strong>Tech Stack:</strong> AI, Python</p>
@@ -96,8 +92,35 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Experience</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Junior Associate Software Engineer — Simple Logic IT Pvt. Ltd.</h5>
+                            <p class="card-text"><strong>Duration:</strong> Nov 2024 - Present</p>
+                            <p class="card-text">Developed a Cloud Dashboard to view all active resources running on the Cloud. Enhanced API performance by 70%.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">IT Specialist — Protera Technologies</h5>
+                            <p class="card-text"><strong>Duration:</strong> Mar 2024 - Sept 2024</p>
+                            <p class="card-text">Configured and maintained SAP instances on the cloud. Implemented IT infrastructure automation with ServiceNow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
-    <section id="skills" class="py-5">
+    <section id="skills" class="bg-light py-5">
         <div class="container">
             <h2 class="text-center mb-4">Skills</h2>
             <div class="row">
@@ -128,7 +151,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-light py-5">
+    <section id="contact" class="py-5">
         <div class="container">
             <h2 class="text-center mb-4">Contact</h2>
             <p class="text-center">Feel free to reach out to me for collaborations or opportunities!</p>
@@ -143,8 +166,13 @@
 
     <!-- Bootstrap JS (Optional, for interactive components) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- WebAssembly Script -->
     <script type="module" src="script.js"></script>
+    <script type="module">
+        import init, { greet } from './pkg/my_wasm_project.js';
+        init().then(() => {
+            document.getElementById('greeting').textContent = greet('Rustacean');
+        });
+    </script>
 </body>
 
 </html>

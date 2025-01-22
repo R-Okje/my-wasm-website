@@ -1,6 +1,7 @@
 /* Custom styles */
 body {
     font-family: 'Arial', sans-serif;
+    padding-top: 56px; /* Offset for fixed navbar */
 }
 
 .navbar {
@@ -17,6 +18,11 @@ section {
 
 .card {
     height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
 }
 
 footer {

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viral Soni - Rust Developer</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -21,17 +22,19 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Jump To
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#projects">Projects</a></li>
+                            <li><a class="dropdown-item" href="#experience">Experience</a></li>
+                            <li><a class="dropdown-item" href="#skills">Skills</a></li>
+                            <li><a class="dropdown-item" href="#education">Education</a></li>
+                            <li><a class="dropdown-item" href="#hackathons">Hackathons</a></li>
+                            <li><a class="dropdown-item" href="#achievements">Achievements</a></li>
+                            <li><a class="dropdown-item" href="#contact">Contact</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -88,6 +91,33 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Hotel Management System — ERP System</h5>
+                            <p class="card-text"><strong>Tech Stack:</strong> SAP ABAP</p>
+                            <p class="card-text">Developed a comprehensive SAP-based hotel management system, including Master Data, Tables, Screens, and Reports.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Raahi — Blockchain-Based Supply Chain Management System</h5>
+                            <p class="card-text"><strong>Tech Stack:</strong> Solidity, JavaScript</p>
+                            <p class="card-text">Designed and enforced a blockchain-based system for verifying and tracking products in the supply chain.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Together We Create — Crowdfunding Platform</h5>
+                            <p class="card-text"><strong>Tech Stack:</strong> HTML, CSS, JavaScript, SQL</p>
+                            <p class="card-text">Developed a platform to connect donors with crowdfunding campaigns using JavaScript and PHP.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -112,6 +142,15 @@
                             <h5 class="card-title">IT Specialist — Protera Technologies</h5>
                             <p class="card-text"><strong>Duration:</strong> Mar 2024 - Sept 2024</p>
                             <p class="card-text">Configured and maintained SAP instances on the cloud. Implemented IT infrastructure automation with ServiceNow.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Associate Consultant — Cognitus Consulting</h5>
+                            <p class="card-text"><strong>Duration:</strong> Jun 2023 - Feb 2024</p>
+                            <p class="card-text">Designed and developed SAP ABAP Workbench for managing hotel master data, tables, and screens.</p>
                         </div>
                     </div>
                 </div>
@@ -150,6 +189,68 @@
         </div>
     </section>
 
+    <!-- Education Section -->
+    <section id="education" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Education</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Degree</th>
+                        <th>Institute</th>
+                        <th>CGPA/Marks</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>B.E. Information Technology</td>
+                        <td>St. Francis Institute of Technology</td>
+                        <td>9.31/10</td>
+                        <td>2023</td>
+                    </tr>
+                    <tr>
+                        <td>HSC (12th Grade)</td>
+                        <td>Alpha Junior College</td>
+                        <td>91.17%</td>
+                        <td>2017</td>
+                    </tr>
+                    <tr>
+                        <td>SSC (10th Grade)</td>
+                        <td>St. Francis ICSE School</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Hackathons Section -->
+    <section id="hackathons" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Hackathons</h2>
+            <ul>
+                <li>Won the institute round of the <strong>Solving for India Hackathon by Google</strong>.</li>
+                <li>Secured Second Runner-Up position in the <strong>SFIT Hackathon 2023</strong>.</li>
+                <li>Led a team at the <strong>Smart India Hackathon (SIH 2022)</strong>.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Achievements</h2>
+            <ul>
+                <li>Developed a project for <strong>Kavach 2023</strong> by the Government of India.</li>
+                <li>Submitted a solution to the <strong>Google Solution Challenge 2022</strong>.</li>
+                <li>Conducted 17+ workshops as President of the <strong>Information Technology Students Association (ITSA)</strong>.</li>
+                <li>Served as <strong>CodeXpert</strong> at CodeX.</li>
+            </ul>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container">
@@ -164,9 +265,10 @@
         <p>&copy; 2024 Viral Soni. All rights reserved.</p>
     </footer>
 
-    <!-- Bootstrap JS (Optional, for interactive components) -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="script.js"></script>
+
+    <!-- WebAssembly Integration -->
     <script type="module">
         import init, { greet } from './pkg/my_wasm_project.js';
         init().then(() => {
@@ -174,5 +276,4 @@
         });
     </script>
 </body>
-
 </html>

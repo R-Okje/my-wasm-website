@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rust + WebAssembly</title>
+    <title>Viral Soni - Rust Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Hello, WebAssembly!</h1>
-    <p id="greeting"></p>
     <script type="module" src="script.js"></script>
     <script type="module">
         import init, { greet } from './pkg/my_wasm_project.js';
@@ -16,5 +16,91 @@
             document.getElementById('greeting').textContent = greet('Rustacean');
         });
     </script>
+
+    <header>
+        <h1>Viral Soni</h1>
+        <p>Specialization in Rust, Cloud, SAP ABAP</p>
+        <p>Bachelor of Engineering in Information Technology (2023)</p>
+        <p>+91 9967271977 | viralssoni@gmail.com</p>
+    </header>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Nimus AI — Cloud Monitoring and Automation</h3>
+            <p><strong>Tech Stack:</strong> Rust, JavaScript, Postman</p>
+            <p>Developed an AI platform for automating tasks in Cloud Computing Services (OCI Cloud). Executed Rust APIs
+                for resource management.</p>
+        </div>
+        <div class="project">
+            <h3>Block Engine — SAP SD Contract Blocking Mechanism</h3>
+            <p><strong>Tech Stack:</strong> SAP ABAP</p>
+            <p>Developed a tool to apply blocks on Sales and Distribution Contracts (SD). Integrated logic to automate
+                block/unblock actions.</p>
+        </div>
+        <div class="project">
+            <h3>Contract Copilot — Contract Analyzer with Quick Search</h3>
+            <p><strong>Tech Stack:</strong> AI, Python</p>
+            <p>Built an AI-powered platform for analyzing contracts and running queries on extracted data.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="job">
+            <h3>Junior Associate Software Engineer — Simple Logic IT Pvt. Ltd.</h3>
+            <p><strong>Duration:</strong> Nov 2024 - Present</p>
+            <p>Developed a Cloud Dashboard to view all active resources running on the Cloud. Enhanced API performance
+                by 70%.</p>
+        </div>
+        <div class="job">
+            <h3>IT Specialist — Protera Technologies</h3>
+            <p><strong>Duration:</strong> Mar 2024 - Sept 2024</p>
+            <p>Configured and maintained SAP instances on the cloud. Implemented IT infrastructure automation with
+                ServiceNow.</p>
+        </div>
+        <!-- Add more experience as needed -->
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <table>
+            <tr>
+                <th>Degree</th>
+                <th>Institute</th>
+                <th>CGPA/Marks</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>B.E. Information Technology</td>
+                <td>St. Francis Institute of Technology</td>
+                <td>9.31/10</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>HSC (12th Grade)</td>
+                <td>Alpha Junior College</td>
+                <td>91.17%</td>
+                <td>2017</td>
+            </tr>
+            <!-- Add more education details as needed -->
+        </table>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Languages:</strong> Rust, Python, C, C++, Java, JavaScript, Shell Script</li>
+            <li><strong>Tools:</strong> Postman, SAP ABAP, Docker, Kubernetes, ServiceNow, Wireshark</li>
+            <li><strong>Databases:</strong> MongoDB, MySQL</li>
+            <li><strong>Soft Skills:</strong> Problem-Solving, Communication, Team Collaboration</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Viral Soni. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>
